@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* custom styles */
+@theme {
+  --font-display: "Work Sans", sans-serif;
+
+  --color-primary: #2947a9;
+  --color-primary-200: #103ea7;
+  --color-secondary: #292e3d;
+  --color-secondary-200: #191d2b;
+  --color-base: #e0e3eb;
+  --color-background-200: #f6f8f7;
+}
+
+@layer base {
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@layer components {
+  .fade-in {
+    animation: fade-in-scale 0.3s ease-out;
+  }
+  .nav-list {
+    @apply cursor-pointer font-medium text-sm text-secondary;
+  }
+  .secondary-btn {
+    @apply hover:bg-secondary-200 text-white bg-secondary w-1/2 border-r border-gray-400 py-1.5 cursor-pointer flex items-center justify-center gap-1;
+  }
+  .primary-btn {
+    @apply bg-primary text-sm font-medium text-white py-2 rounded-xs hover:bg-primary-200 cursor-pointer transition-colors duration-300;
+  }
+  .reputation-card {
+    @apply border border-base md:px-3.5 px-10 py-6 rounded-sm md:text-left md:block flex flex-col items-center text-center;
+  }
+  .service-card-blue {
+    @apply shadow-lg bg-primary md:bg-white flex flex-col gap-3 items-center px-10 py-5 rounded-sm;
+  }
+  .service-card-white {
+    @apply shadow-lg bg-white md:bg-primary flex flex-col gap-3 items-center px-10 py-5 rounded-sm;
+  }
+  .project-list {
+    @apply text-gray-400 cursor-pointer pl-2 hover:text-primary transition duration-300;
+  }
+  .pagination-2 {
+    @apply bg-background-200 rounded-full inline-block size-3 cursor-pointer;
+  }
+  .input-field {
+    @apply w-1/2 border border-base bg-white px-2 py-1 text-gray-400 focus:outline-1 outline-black/30 focus:border rounded-sm text-sm font-medium;
+  }
+}

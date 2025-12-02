@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carattere&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="m-0 p-0 box-border font-display">
+    <header
+      class="peer z-100 bg-white/80 backdrop-blur-md sticky top-0 border-b border-gray-200/30 shadow-2xs"
+    >
+      <nav
+        class="md:w-[85%] w-[90%] mx-auto flex items-center justify-between py-4"
+      >
+        <!-- logo -->
+        <div class="flex items-center gap-2">
+          <img src="./assets/images/logo.svg" alt="logo" />
+          <img src="./assets/images/TheBox.svg" alt="logo" />
+        </div>
+
+        <!-- lists -->
+        <ul class="md:flex hidden items-center gap-10">
+          <li class="nav-list">
+            <a href="#">Home</a>
+          </li>
+          <li class="nav-list">
+            <a href="#about">About Us</a>
+          </li>
+          <li class="nav-list">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="nav-list">
+            <a href="#services">Services</a>
+          </li>
+          <li class="nav-list text-orange-400">
+            <a href="#contact">Contacts Us</a>
+          </li>
+        </ul>
+
+        <!-- hidden groupm content conta, -->
+        <div class="group md:hidden">
+          <!-- menu -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 512 512"
+            class="cursor-pointer"
+          >
+            <rect width="512" height="512" fill="none" />
+            <path
+              fill="none"
+              stroke="#14171F"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="48"
+              d="M88 152h336M88 256h336M88 360h336"
+            />
+          </svg>
+
+          <!-- sidebar -->
+          <div
+            class="fade-in group-hover:block hidden pointer-events-auto w-full h-full bg-white fixed top-0 right-0 z-1000 shadow-2xl"
+          >
+            <!-- Menu stuff -->
+            <div class="py-5 px-6 z-1000 bg-white shadow-2xl">
+              <!-- mobile menu header -->
+              <div class="flex items-center justify-between mb-12">
+                <!-- logo - mobile -->
+                <div class="flex items-center gap-2">
+                  <img src="./assets/images/logo.svg" alt="logo" />
+                  <img src="./assets/images/TheBox.svg" alt="logo" />
+                </div>
+
+                <!-- xmark - mobile -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="cursor-pointer"
+                >
+                  <rect width="24" height="24" fill="none" />
+                  <path
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
+                  />
+                </svg>
+              </div>
+
+              <!-- mobile menu content -->
+              <ul class="flex flex-col gap-6 font-medium">
+                <li class="nav-list pb-3">
+                  <a href="#">Home</a>
+                </li>
+                <li class="nav-list pb-3">
+                  <a href="#about">About Us</a>
+                </li>
+                <li class="nav-list pb-3">
+                  <a href="#projects">Projects</a>
+                </li>
+                <li class="nav-list pb-3">
+                  <a href="#services">Services</a>
+                </li>
+              </ul>
+
+              <a href="#contact">
+                <button
+                  class="w-full bg-orange-400 hover:bg-orange-500 cursor-pointer transition duration-300 py-3 px-4 rounded-sm text-white font-semibold mt-8"
+                >
+                  Contact Us
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero section -->
+    <section
+      class="relative h-87 md:h-118 bg-[url('./assets/images/hero_img.jpg')] bg-cover bg-no-repeat bg-center"
+    >
+      <!-- overlay -->
+      <div
+        class="absolute inset-0 bg-linear-to-tr from-white via-transparent to-transparent z-0"
+      ></div>
+
+      <!-- header text -->
+      <div class="z-10 flex items-center h-full px-8 md:px-24">
+        <h1
+          class="font-semibold text-4xl md:text-5xl text-secondary z-10 w-102"
+        >
+          Building things is our mission.
+        </h1>
+      </div>
+
+      <!-- bottom right box -->
+      <div class="absolute right-0 bottom-0">
+        <div
+          class="bg-primary relative p-3 md:p-5 text-white h-25 w-70 md:w-75 md:h-32 text-center flex flex-col gap-1 items-center"
+        >
+          <h2 class="font-bold md:text-base text-sm">Feature Projects</h2>
+          <p class="md:text-sm text-xs">
+            The National University of Architecture
+          </p>
+
+          <div
+            class="absolute bottom-0 w-full bg-secondary flex font-medium text-sm"
+          >
+            <button class="secondary-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="9"
+                viewBox="0 0 16 9"
+              >
+                <rect width="16" height="9" fill="none" />
+                <path
+                  fill="#fff"
+                  d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                />
+                <path
+                  fill="#fff"
+                  d="M6 8.5a.47.47 0 0 1-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0s.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71c-.1.1-.23.15-.35.15Z"
+                />
+              </svg>
+              <p>Back</p>
+            </button>
+
+            <button class="secondary-btn">
+              <p>Next</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="9"
+                viewBox="0 0 16 9"
+              >
+                <rect width="16" height="9" fill="none" />
+                <path
+                  fill="#fff"
+                  d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                />
+                <path
+                  fill="#fff"
+                  d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reputation section -->
+    <section class="flex flex-col items-center py-12 gap-10">
+      <h2 class="text-secondary font-bold text-2xl">Our Reputation</h2>
+
+      <div
+        class="flex flex-col md:flex-row md:w-[75%] w-[85%] mx-auto gap-5 md:gap-10"
+      >
+        <!-- card 1 -->
+        <div class="reputation-card">
+          <img src="./assets/images/icon1.svg" alt="image" />
+          <h3 class="text-secondary font-bold py-2">Best Services</h3>
+          <p class="text-gray-400 text-sm">
+            Nullam senectus porttitor in eget. Eget rutrum leo interdum.
+          </p>
+        </div>
+
+        <!-- card 2 -->
+        <div class="reputation-card">
+          <img src="./assets/images/icon1.svg" alt="" />
+          <h3 class="text-secondary font-bold py-2">Best Services</h3>
+          <p class="text-gray-400 text-sm">
+            Nullam senectus porttitor in eget. Eget rutrum leo interdum.
+          </p>
+        </div>
+
+        <!-- card 3 -->
+        <div class="reputation-card">
+          <img src="./assets/images/icon1.svg" alt="" />
+          <h3 class="text-secondary font-bold py-2">Best Services</h3>
+          <p class="text-gray-400 text-sm">
+            Nullam senectus porttitor in eget. Eget rutrum leo interdum.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- about us -->
+    <section id="about" class="w-[90%] md:w-[85%] mx-auto relative flex">
+      <img
+        src="./assets/images/about-img.jpg"
+        alt="about"
+        class="w-full md:w-[75%] h-50 md:h-122 object-cover md:shadow-xl"
+      />
+
+      <!-- about -->
+      <div
+        class="absolute right-0 top-full md:top-15 bg-primary w-full md:w-[356px] h-fit p-8 text-white shadow-xl"
+      >
+        <h3 class="font-bold text-xl py-2">About us</h3>
+        <p class="text-sm py-4 tracking-tight">
+          For more than 30 years we have been delivering world-class
+          construction and we’ve built many lasting relationships along the way.
+        </p>
+        <p class="text-sm pb-6 tracking-tight">
+          We’ve matured into an industry leader and trusted resource for those
+          seeking quality, innovation and reliability when building in the U.S.
+        </p>
+
+        <button
+          class="bg-white hover:bg-gray-200 text-primary px-4 py-2 my-4 rounded-xs cursor-pointer text-sm font-medium"
+        >
+          Make on Our History
+        </button>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section
+      id="services"
+      class="mt-120 md:mt-20 bg-background-200 py-10 flex flex-col items-center"
+    >
+      <h2 class="font-bold text-secondary text-2xl">Services</h2>
+      <div
+        class="text-center grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-x-20 md:gap-y-10 py-5 md:w-[75%] w-[85%] mx-auto"
+      >
+        <div class="service-card-blue">
+          <img
+            src="./assets/images/services-img5.svg"
+            alt="services"
+            class="border-b-2 border-base p-3"
+          />
+          <p
+            class="md:text-primary text-white text-sm capitalize font-semibold"
+          >
+            construction
+          </p>
+        </div>
+
+        <div class="service-card-white">
+          <img
+            src="./assets/images/services-img2.svg"
+            alt="services"
+            class="border-b-2 border-base p-3"
+          />
+          <p
+            class="md:text-white text-primary text-sm capitalize font-semibold"
+          >
+            Renovation
+          </p>
+        </div>
+
+        <div
+          class="shadow-lg bg-white flex flex-col gap-3 items-center px-10 py-5 rounded-sm"
+        >
+          <img
+            src="./assets/images/services-img3.svg"
+            alt="services"
+            class="border-b-2 border-base p-3"
+          />
+          <p class="text-primary text-sm capitalize font-semibold">
+            consultation
+          </p>
+        </div>
+
+        <div
+          class="shadow-lg bg-primary flex flex-col gap-3 items-center px-5 md:px-10 py-5 rounded-sm"
+        >
+          <img
+            src="./assets/images/services-img2.svg"
+            alt="services"
+            class="border-b-2 border-base p-3"
+          />
+          <p class="text-white text-sm capitalize font-semibold">
+            Repair services
+          </p>
+        </div>
+
+        <div class="service-card-blue">
+          <img
+            src="./assets/images/services-img5.svg"
+            alt="services"
+            class="border-b-2 border-base p-3"
+          />
+          <p
+            class="md:text-primary text-white text-sm capitalize font-semibold"
+          >
+            Architecture
+          </p>
+        </div>
+
+        <div class="service-card-white">
+          <img
+            src="./assets/images/services-img2.svg"
+            alt="services"
+            class="border-b-2 border-base p-3"
+          />
+          <p
+            class="md:text-white text-primary text-sm capitalize font-semibold"
+          >
+            electric
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- experience -->
+    <section class="flex pt-40 pb-35 md:pb-10 md:w-[75%] w-[85%] mx-auto">
+      <!-- left -->
+      <div class="md:w-[75%] relative overflow-visible h-75 md:h-100">
+        <!-- 1 -->
+        <div
+          class="absolute md:-left-10 md:top-10 lg:left-15 lg:-top-10 left-20 -top-35 bg-white shadow-lg pl-6 pr-15 py-6 rounded-sm flex flex-col gap-2"
+        >
+          <span class="text-3xl md:text-5xl font-semibold text-secondary"
+            >123</span
+          >
+          <p
+            class="text-gray-400 text-md border-l-4 border-orange-400 pl-2 text-nowrap"
+          >
+            Projects Completed
+          </p>
+          <img
+            src="./assets/images/illus.png"
+            alt="illustration"
+            class="w-8 md:w-12 absolute -top-4 -left-3"
+          />
+        </div>
+
+        <!-- 2 -->
+        <div
+          class="absolute right-40 -top-25 bg-white shadow-lg pl-6 pr-15 py-6 rounded-sm hidden md:flex flex-col gap-2"
+        >
+          <span class="text-3xl md:text-5xl font-semibold text-secondary"
+            >123</span
+          >
+          <p class="text-gray-400 text-md border-l-4 border-orange-400 pl-2">
+            Projects Complete
+          </p>
+          <img
+            src="./assets/images/illus (1).png"
+            alt="illustration"
+            class="w-12 md:w-15 absolute -top-4 -right-6"
+          />
+        </div>
+
+        <!-- 3 -->
+        <div
+          class="absolute md:left-40 md:top-20 hidden bg-white shadow-lg pl-6 pr-15 py-6 rounded-sm md:flex flex-col gap-2 z-1"
+        >
+          <span class="text-3xl md:text-5xl font-semibold text-secondary"
+            >123</span
+          >
+          <p class="text-gray-400 text-md border-l-4 border-orange-400 pl-2">
+            Projects Completed
+          </p>
+          <img
+            src="./assets/images/illus (2).png"
+            alt="illustration"
+            class="w-12 md:w-15 absolute -top-4 -right-3"
+          />
+        </div>
+
+        <!-- 4 -->
+        <div
+          class="absolute md:left-15 md:top-45 md:bottom-20 left-0 -bottom-20 bg-white shadow-lg pl-6 pr-15 py-6 rounded-sm flex flex-col gap-2"
+        >
+          <span class="text-3xl md:text-5xl font-semibold text-secondary"
+            >30</span
+          >
+          <p
+            class="text-gray-400 text-md border-l-4 border-orange-400 pl-2 text-nowrap"
+          >
+            Years in Business
+          </p>
+          <img
+            src="./assets/images/illus (3).png"
+            alt="illustration"
+            class="w-12 md:w-15 absolute -bottom-4 -right-3"
+          />
+        </div>
+      </div>
+
+      <!-- right -->
+      <div class="flex flex-col gap-5 w-full md:w-[30%] z-2">
+        <h2 class="text-primary font-bold text-4xl lg:text-5xl">
+          30 Years Experience
+        </h2>
+        <p class="text-gray-400 text-sm">
+          Our company has been the leading provided construction services to
+          clients throughout the USA since 1988.
+        </p>
+        <button
+          class="primary-btn px-4 w-fit"
+        >
+          Contact Us
+        </button>
+      </div>
+    </section>
+
+    <!-- consultation -->
+    <section
+      class="relative bg-[url('./assets/images/consultation_Img.jpg')] bg-cover bg-center bg-no-repeat h-[180px] md:h-[220px] flex flex-col justify-center"
+    >
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div
+        class="md:w-[85%] w-[90%] mx-auto z-1 flex flex-wrap items-center justify-between gap-y-5"
+      >
+        <div class="flex flex-col gap-5">
+          <h2 class="text-white text-xl md:text-3xl font-bold tracking-wide">
+            Free consultation with exceptional quality
+          </h2>
+          <p class="text-white text-md md:text-lg tracking-wide">
+            Just one call away:
+            <a class="underline underline-offset-1" href="tel:+84 1102 2703"
+              >+84 1102 2703</a
+            >
+          </p>
+        </div>
+
+        <button
+          class="text-white px-4 py-2 text-sm font-medium border border-white bg-transparent md:mr-10 cursor-pointer hover:bg-white/10 transition-colors duration-300"
+        >
+          Get your consultation
+        </button>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="py-10">
+      <div class="md:w-[85%] w-[90%] mx-auto">
+        <h2 class="text-black text-3xl my-3 font-semibold">Projects</h2>
+
+        <div class="md:flex justify-between mt-4">
+          <div class="my-8 md:my-0">
+            <ul
+              class="text-md text-medium flex md:flex-col gap-5 md:gap-3 list-none sticky top-30"
+            >
+              <li
+                class="text-primary font-bold cursor-pointer md:pl-2 pb-2 border-b-3 md:border-b-0 md:border-l-3 border-primary"
+              >
+                All
+              </li>
+              <li class="project-list">Commercial</li>
+              <li class="project-list">Residential</li>
+              <li class="project-list">Other</li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- images grid -->
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-5">
+              <!-- image 1 -->
+              <div class="w-full md:w-70 h-60">
+                <img
+                  src="./assets/images/con1.png"
+                  alt="consultation"
+                  class="w-full h-50 object-cover bg-cover"
+                />
+                <div class="text-white bg-primary px-3 py-2">
+                  <span class="font-semibold text-sm"
+                    >Wildstone Infra Hotel</span
+                  >
+                  <p class="text-xs font-medium tracking-wide">
+                    2715 Ash Dr. San Jose, South Dakota
+                  </p>
+                </div>
+              </div>
+
+              <!-- image 2 -->
+              <div class="w-full md:w-70 h-60">
+                <img
+                  src="./assets/images/con2.png"
+                  alt="consultation"
+                  class="w-full h-[200px] object-cover bg-cover"
+                />
+                <div class="text-white bg-primary px-3 py-2">
+                  <span class="font-semibold text-sm">Wish Stone Building</span>
+                  <p class="text-xs font-medium tracking-wide">
+                    2972 Westheimer Rd. Santa Ana, Illinois
+                  </p>
+                </div>
+              </div>
+
+              <!-- image 3 -->
+              <div class="w-full md:w-70 h-60">
+                <img
+                  src="./assets/images/con3.png"
+                  alt="consultation"
+                  class="w-full h-50 object-cover bg-cover"
+                />
+                <div class="text-white bg-primary px-3 py-2">
+                  <span class="font-semibold text-sm"
+                    >Mr. Parkinston’s House</span
+                  >
+                  <p class="text-xs font-medium tracking-wide">
+                    3517 W. Gray St. Utica, Pennsylvania
+                  </p>
+                </div>
+              </div>
+
+              <!-- image 4 -->
+              <div class="w-full md:w-70 h-60">
+                <img
+                  src="./assets/images/con4.png"
+                  alt="consultation"
+                  class="w-full h-50 object-cover bg-cover"
+                />
+                <div class="text-white bg-primary px-3 py-2">
+                  <span class="font-semibold text-sm">Oregano Height</span>
+                  <p class="text-xs font-medium tracking-wide">
+                    2464 Royal Ln. Mesa, New Jersey
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- painations -->
+            <div class="flex gap-5 items-center justify-between py-8">
+              <button class="secondary-btn w-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="9"
+                  viewBox="0 0 16 9"
+                >
+                  <rect width="16" height="9" fill="none" />
+                  <path
+                    fill="#fff"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#fff"
+                    d="M6 8.5a.47.47 0 0 1-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0s.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+                Back
+              </button>
+              <div class="flex gap-1">
+                <span class="bg-primary pagination-2"></span>
+                <span class="pagination-2"></span>
+                <span class="pagination-2"></span>
+                <span class="pagination-2"></span>
+                <span class="pagination-2"></span>
+              </div>
+
+              <button class="secondary-btn w-full">Next &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- message - contact -->
+    <section id="contact" class="bg-background-200 py-10 px-3">
+      <div
+        class="max-w-lg w-full text-center mx-auto flex flex-col items-center justify-center gap-5"
+      >
+        <h2 class="text-3xl text-secondary font-bold">
+          What can we do for you?
+        </h2>
+        <p class="text-secondary text-md font-medium">
+          We are ready to work on a project of any complexity, whether it’s
+          commercial or residential.
+        </p>
+
+        <form class="flex flex-col gap-5 md:max-w-3xl md:w-full w-[90%]">
+          <div class="flex w-full gap-5">
+            <input
+              type="text"
+              required
+              placeholder="Your Name*"
+              class="input-field"
+            />
+            <input
+              type="email"
+              required
+              placeholder="Email*"
+              class="input-field"
+            />
+          </div>
+
+          <div class="flex w-full gap-5">
+            <input
+              type="text"
+              required
+              placeholder="Reason for Contacting*"
+              class="input-field"
+            />
+            <input
+              type="email"
+              required
+              placeholder="Phone*"
+              class="input-field"
+            />
+          </div>
+
+          <div>
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows="5"
+              class="resize-none w-full input-field"
+            ></textarea>
+            <p class="text-left text-xs text-red-400">
+              * indicates a required field
+            </p>
+          </div>
+
+          <button
+            class="primary-btn px-20 mx-auto"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-white">
+      <div
+        class="md:w-[85%] w-[90%] mx-auto flex flex-wrap gap-y-12 items-center justify-between py-10"
+      >
+        <!-- left -->
+        <div class="flex flex-col gap-6">
+          <p class="text-primary text-sm font font-semibold">
+            ADDRESS:
+            <span class="text-black text-sm font-medium tracking-wide"
+              >6391 Elgin St. Celina, Delaware 10299</span
+            >
+          </p>
+          <p class="text-primary text-sm font font-semibold">
+            PHONE:
+            <span class="text-black text-sm font-medium tracking-wide"
+              >+84 1102 2703</span
+            >
+          </p>
+          <p class="text-primary text-sm font font-semibold">
+            EMAIL:
+            <span class="text-black text-sm font-medium tracking-wide"
+              >hello@thebox.com</span
+            >
+          </p>
+
+          <div class="flex items-center gap-2">
+            <img src="./assets/images/logo.svg" alt="logo" />
+            <img src="./assets/images/TheBox.svg" alt="logo" />
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="flex flex-col gap-6">
+          <p class="text-primary text-sm font font-semibold">NEWSLETTER:</p>
+          <form class="flex gap-1">
+            <input
+              type="email"
+              placeholder="Your email here"
+              class="border border-base bg-white px-2 py-1 text-gray-400 focus:outline-1 focus:border-black rounded-sm text-sm font-medium"
+            />
+            <button
+              class="bg-orange-400 hover:bg-orange-500 transition duration-300 cursor-pointer text-white px-4 py-2 text-sm font-medium rounded-sm"
+            >
+              Subscribe
+            </button>
+          </form>
+
+          <p class="text-primary text-sm font font-semibold">SOCIAL:</p>
+          <div class="flex gap-2">
+            <a href="#">
+              <img
+                src="./assets/images/facebook.png"
+                alt="facebook"
+                class="w-7"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./assets/images/linkedin.svg"
+                alt="linkedin"
+                class="w-7"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./assets/images/twitter.svg"
+                alt="twitter"
+                class="w-7"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary py-4 text-white text-sm font-medium">
+        <div class="w-[90%] md:w-[85%] mx-auto">
+          TheBox Company &copy; 2022. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
